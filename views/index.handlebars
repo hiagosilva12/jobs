@@ -1,3 +1,29 @@
+<header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Job Finder</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Ver Vagas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary" href="/jobs/add">Abrir Vaga</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 <div id="top-container" class="container-fluid">
   <h1 id="main-title" class="text-center">Encontre o emprego dos seus sonhos</h1>
   <p id="main-subtitle" class="text-center">Somos o site com mais vagas de tecnologia no mercado, direcionadas a home office</p>
@@ -27,8 +53,10 @@
               <h2>{{dataValues.title}}</h2>
               <p>R${{dataValues.salary}}</p>
               <span class="new-job-label">Nova</span>
+              
               <a class="btn btn-primary" href="/jobs/view/{{dataValues.id}}">Ver vaga</a>
             </li>
+              
           {{/each}}
         </ul>
       </div>
