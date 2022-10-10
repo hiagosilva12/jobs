@@ -4,7 +4,7 @@
 }
 
 /* nav */
-.navbar  {
+.navbar {
   padding: 1rem;
   border-bottom: 1px solid #CCC;
 }
@@ -155,7 +155,7 @@
 
 #form-box {
   padding: 50px;
-  box-shadow: 0 1px 5px rgba(0,0,0,.15);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
   border-radius: 4px;
   background-color: #FFF;
   margin-bottom: 50px;
@@ -239,7 +239,7 @@
 
 /* responsivo */
 
-@media (max-width: 481px) {
+@media (max-width: 768px) {
 
   /* navbar */
   #navbarNav {
@@ -316,4 +316,15 @@
     width: 100%;
   }
 
+}
+
+.list-group-item button {
+  position: absolute;
+  right: 150px;
+  top: 35px;
+  height: 50px;
+  line-height: 35px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: black;
 }

@@ -1,13 +1,9 @@
-/** @format */
-
 const express = require("express");
 const router = express.Router();
 const Job = require("../models/job");
-
+const User = require("../models/userAdmin");
 // routers
-router.get("/test", (req, res) => {
-  res.send("Rota de teste");
-});
+
 // detalhe da vaga
 router.get("/view/:id", (req, res) =>
   Job.findOne({
@@ -41,6 +37,31 @@ router.post("/add", (req, res) => {
   })
     .then(() => res.redirect("/"))
     .catch((err) => console.log(err));
+});
+
+// rota de delete
+router.get("/delete/:id", (req, res) => {
+  Job.destroy({
+    where: { id: req.params.id },
+  })
+    .then(() => res.redirect("/"))
+    .catch((err) => console.log(err));
+});
+
+router.get("/login", (req, res) => {
+  res.render("login");
+});
+
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  const user = await User.findOne({ where: { email } });
+  if (user) {
+    return res.status(400).json({ error: "User already exists" });
+  }
+  if (password !== "admin") {
+    return res.status(400).json({ error: "Password invalid" });
+  }
+  res.redirect("/");
 });
 
 module.exports = router;

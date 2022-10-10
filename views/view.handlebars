@@ -1,17 +1,53 @@
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Job Finder</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Ver Vagas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary" href="/jobs/add">Abrir Vaga</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 <div id="job-view-container" class="container">
   <div class="row text-center">
     <a class="back-link main-color" href="/">Voltar</a>
     <div id="img-container" class="col-md-12">
-      <img src="/img/company.svg" alt="Company">
+      <img src="/img/company.svg" alt="Company" />
     </div>
     <div class="col-md-12">
       <h1 class="main-color">{{job.dataValues.title}}</h1>
       <p class="bold">Quem eles estão buscando:</p>
       <p class="job-desc">{{job.dataValues.description}}</p>
-      <p><span class="bold">O salário informado é de:</span> R${{job.dataValues.salary}}</p>
+      <p><span class="bold">O salário informado é de:</span>
+        R${{job.dataValues.salary}}</p>
       <p>
-        Para trabalhar na <span class="bold main-color">{{job.dataValues.company}}</span> envie um e-mail para a <a class="main-color" href="mail:to{{job.dataValues.email}}">{{job.dataValues.email}}</a>
+        Para trabalhar na
+        <span class="bold main-color">{{job.dataValues.company}}</span>
+        envie um e-mail para a
+        <a
+          class="main-color"
+          href="mail:to{{job.dataValues.email}}"
+        >{{job.dataValues.email}}</a>
       </p>
+      <form action="/jobs/delete/{{job.dataValues.id}}" method="get">
+        <button type="submit" class="btn btn-danger">Deletar Vaga</button>
+      </form>
     </div>
   </div>
 </div>
