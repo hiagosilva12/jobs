@@ -237,9 +237,40 @@
   text-decoration: none;
 }
 
+.form-login {
+  height: 80vh;
+}
+
+.form-login input {
+  width: 20rem;
+}
+
 /* responsivo */
 
 @media (max-width: 768px) {
+
+  /* inputs  account */
+  .form-account {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .form-account div {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .form-account section {
+    padding-right: 0 !important;
+  }
+
+  /* inputs login */
+  .form-login input {
+    width: 100%;
+  }
 
   /* navbar */
   #navbarNav {

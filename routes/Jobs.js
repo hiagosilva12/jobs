@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const Job = require("../models/job");
-const User = require("../models/userAdmin");
 // routers
 
 // detalhe da vaga
@@ -46,22 +45,6 @@ router.get("/delete/:id", (req, res) => {
   })
     .then(() => res.redirect("/"))
     .catch((err) => console.log(err));
-});
-
-router.get("/login", (req, res) => {
-  res.render("login");
-});
-
-router.post("/login", async (req, res) => {
-  const { email, password } = req.body;
-  const user = await User.findOne({ where: { email } });
-  if (user) {
-    return res.status(400).json({ error: "User already exists" });
-  }
-  if (password !== "admin") {
-    return res.status(400).json({ error: "Password invalid" });
-  }
-  res.redirect("/");
 });
 
 module.exports = router;

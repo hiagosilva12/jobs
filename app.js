@@ -54,7 +54,6 @@ app.get("/", (req, res) => {
     })
       .then((jobs) => {
         console.log(search);
-        console.log(search);
 
         res.render("index", {
           jobs,
@@ -67,3 +66,5 @@ app.get("/", (req, res) => {
 
 // jobs routes
 app.use("/jobs", require("./routes/Jobs"));
+app.use("", require("./routes/Login"));
+app.use("", require("./routes/CreateAccount"));

@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand pl-3" href="/">Job Finder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/create-account">Criar conta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form action="/create-account" method="POST"
+            class="d-flex justify-content-center align-items-center flex-column form-login form-account">
+            <div class="d-flex">
+                <section class="mb-3 pr-4">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="name" name="name" class="form-control" id="name" aria-describedby="namelHelp" />
+                </section>
+                <section class="mb-3">
+                    <label for="surname" class="form-label">Last name</label>
+                    <input type="surname" name="surname" class="form-control" id="surname"
+                        aria-describedby="surnamelHelp" />
+                </section>
+            </div>
+
+            <div class="d-flex">
+                <section class="mb-3 pr-4">
+                    <label for="role" class="form-label">Role</label>
+                    <input type="role" name="role" class="form-control" id="role" aria-describedby="rolelHelp" />
+                </section>
+                <section class="mb-3">
+                    <label for="companyname" class="form-label">Company name</label>
+                    <input type="companyname" name="companyname" class="form-control" id="companyname"
+                        aria-describedby="companynamelHelp" />
+                </section>
+            </div>
+
+            <div class="d-flex">
+                <section class="mb-3 pr-4">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="cpf" name="cpf" class="form-control" id="cpf" aria-describedby="cpflHelp" />
+                </section>
+                <section class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" />
+                </section>
+            </div>
+            <div class="d-flex">
+                <section class="mb-3 pr-4">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" />
+                </section>
+                <section class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm password</label>
+                    <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" />
+                </section>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
